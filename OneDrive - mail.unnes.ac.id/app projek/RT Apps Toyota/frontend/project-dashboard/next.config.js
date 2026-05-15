@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isGithubPages = process.env.GITHUB_PAGES === 'true'
-const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1]
+const repositoryName = (process.env.GITHUB_REPOSITORY || '').split('/')[1] || ''
 const basePath = isGithubPages && repositoryName ? `/${repositoryName}` : ''
 
 const nextConfig = {
