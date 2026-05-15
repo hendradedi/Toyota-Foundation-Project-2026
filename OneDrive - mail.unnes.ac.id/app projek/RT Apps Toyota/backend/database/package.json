@@ -1,0 +1,27 @@
+{
+  "name": "@rt-muban/database",
+  "version": "1.0.0",
+  "description": "Database migrations and seeders for RT-Muban platform",
+  "main": "dist/index.js",
+  "scripts": {
+    "migrate": "ts-node migrate.ts",
+    "migrate:rollback": "ts-node migrate.ts --rollback",
+    "seed": "ts-node seed.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "keywords": ["database", "migrations", "postgresql"],
+  "author": "UNNES & Chulalongkorn University",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "pg": "^8.11.3",
+    "knex": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/pg": "^8.10.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.0"
+  }
+}

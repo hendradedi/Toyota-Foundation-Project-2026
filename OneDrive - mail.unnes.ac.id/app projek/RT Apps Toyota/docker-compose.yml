@@ -1,0 +1,507 @@
+version: '3.8'
+
+services:
+  # ============================================
+  # Database Services
+  # ============================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: rt-muban-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: rt_muban_db
+      POSTGRES_USER: rt_muban_user
+      POSTGRES_PASSWORD: secure_password_change_me
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/database/init:/docker-entrypoint-initdb.d
+    networks:
+      - rt-muban-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rt_muban_user -d rt_muban_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: rt-muban-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - rt-muban-network
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mongo:
+    image: mongo:6
+    container_name: rt-muban-mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin_password
+      MONGO_INITDB_DATABASE: rt_muban_logs
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+      - ./backend/database/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - rt-muban-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/rt_muban_logs --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================
+  # Message Queue
+  # ============================================
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rt-muban-rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin_password
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - rt-muban-network
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================
+  # API Gateway
+  # ============================================
+  api-gateway:
+    build:
+      context: ./backend/api-gateway
+      dockerfile: Dockerfile.dev
+    container_name: rt-muban-api-gateway
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: rt_muban_db
+      DB_USER: rt_muban_user
+      DB_PASSWORD: secure_password_change_me
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      JWT_SECRET: your_super_secret_jwt_key_change_me_in_production
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend/api-gateway:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - rt-muban-network
+    command: npm run dev
+
+  # ============================================
+  # User Service
+  # ============================================
+  user-service:
+    build:
+      context: ./backend/services/user-service
+      dockerfile: Dockerfile.dev
+    container_name: rt-muban-user-service
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3001
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: rt_muban_db
+      DB_USER: rt_muban_user
+      DB_PASSWORD: secure_password_change_me
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      JWT_SECRET: your_super_secret_jwt_key_change_me_in_production
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend/services/user-service:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - rt-muban-network
+    command: npm run dev
+
+  # ============================================
+  # Administration Service
+  # ============================================
+  administration-service:
+    build:
+      context: ./backend/services/administration-service
+      dockerfile: Dockerfile.dev
+    container_name: rt-muban-administration-service
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3002
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: rt_muban_db
+      DB_USER: rt_muban_user
+      DB_PASSWORD: secure_password_change_me
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./backend/services/administration-service:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - rt-muban-network
+    command: npm run dev
+
+  # ============================================
+  # Waste Bank Service
+  # ============================================
+  waste-bank-service:
+    build:
+      context: ./backend/services/waste-bank-service
+      dockerfile: Dockerfile.dev
+    container_name: rt-muban-waste-bank-service
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3003
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: rt_muban_db
+      DB_USER: rt_muban_user
+      DB_PASSWORD: secure_password_change_me
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    ports:
+      - "3003:3003"
+    volumes:
+      - ./backend/services/waste-bank-service:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - rt-muban-network
+    command: npm run dev
+
+  # ============================================
+  # Marketplace Service
+  # ============================================
+  marketplace-service:
+    build:
+      context: ./backend/services/marketplace-service
+      dockerfile: Dockerfile.dev
+    container_name: rt-muban-marketplace-service
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3004
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: rt_muban_db
+      DB_USER: rt_muban_user
+      DB_PASSWORD: secure_password_change_me
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    ports:
+      - "3004:3004"
+    volumes:
+      - ./backend/services/marketplace-service:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - rt-muban-network
+    command: npm run dev
+
+  # ============================================
+  # SOS Service
+  # ============================================
+  sos-service:
+    build:
+      context: ./backend/services/sos-service
+      dockerfile: Dockerfile.dev
+    container_name: rt-muban-sos-service
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3005
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: rt_muban_db
+      DB_USER: rt_muban_user
+      DB_PASSWORD: secure_password_change_me
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    ports:
+      - "3005:3005"
+    volumes:
+      - ./backend/services/sos-service:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - rt-muban-network
+    command: npm run dev
+
+  # ============================================
+  # Patrol Service
+  # ============================================
+  patrol-service:
+    build:
+      context: ./backend/services/patrol-service
+      dockerfile: Dockerfile.dev
+    container_name: rt-muban-patrol-service
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3006
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: rt_muban_db
+      DB_USER: rt_muban_user
+      DB_PASSWORD: secure_password_change_me
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    ports:
+      - "3006:3006"
+    volumes:
+      - ./backend/services/patrol-service:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - rt-muban-network
+    command: npm run dev
+
+  # ============================================
+  # Notification Service
+  # ============================================
+  notification-service:
+    build:
+      context: ./backend/services/notification-service
+      dockerfile: Dockerfile.dev
+    container_name: rt-muban-notification-service
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3007
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: rt_muban_db
+      DB_USER: rt_muban_user
+      DB_PASSWORD: secure_password_change_me
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+    ports:
+      - "3007:3007"
+    volumes:
+      - ./backend/services/notification-service:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - rt-muban-network
+    command: npm run dev
+
+  # ============================================
+  # Web Application
+  # ============================================
+  web-app:
+    build:
+      context: ./frontend/web-app
+      dockerfile: Dockerfile.dev
+    container_name: rt-muban-web-app
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3008
+      REACT_APP_API_URL: http://localhost:3000
+      REACT_APP_WS_URL: ws://localhost:3000
+    ports:
+      - "3008:3008"
+    volumes:
+      - ./frontend/web-app:/app
+      - /app/node_modules
+    depends_on:
+      - api-gateway
+    networks:
+      - rt-muban-network
+    command: npm start
+
+  # ============================================
+  # Admin Dashboard
+  # ============================================
+  admin-dashboard:
+    build:
+      context: ./frontend/admin-dashboard
+      dockerfile: Dockerfile.dev
+    container_name: rt-muban-admin-dashboard
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3009
+      REACT_APP_API_URL: http://localhost:3000
+    ports:
+      - "3009:3009"
+    volumes:
+      - ./frontend/admin-dashboard:/app
+      - /app/node_modules
+    depends_on:
+      - api-gateway
+    networks:
+      - rt-muban-network
+    command: npm start
+
+  # ============================================
+  # Monitoring & Observability
+  # ============================================
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: rt-muban-prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./infrastructure/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - rt-muban-network
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: rt-muban-grafana
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_INSTALL_PLUGINS: grafana-piechart-panel
+    ports:
+      - "9091:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./infrastructure/monitoring/grafana/provisioning:/etc/grafana/provisioning
+    networks:
+      - rt-muban-network
+    depends_on:
+      - prometheus
+
+  # ============================================
+  # Database Management
+  # ============================================
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: rt-muban-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@rt-muban.example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - rt-muban-network
+    depends_on:
+      - postgres
+
+  # ============================================
+  # Redis Management
+  # ============================================
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: rt-muban-redis-commander
+    restart: unless-stopped
+    environment:
+      REDIS_HOSTS: local:redis:6379
+    ports:
+      - "8081:8081"
+    networks:
+      - rt-muban-network
+    depends_on:
+      - redis
+
+# ============================================
+# Networks
+# ============================================
+networks:
+  rt-muban-network:
+    driver: bridge
+    name: rt-muban-network
+
+# ============================================
+# Volumes
+# ============================================
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  mongo_data:
+    driver: local
+  rabbitmq_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+  pgadmin_data:
+    driver: local

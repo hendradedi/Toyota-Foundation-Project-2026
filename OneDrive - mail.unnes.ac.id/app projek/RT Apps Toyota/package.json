@@ -1,0 +1,91 @@
+{
+  "name": "digital-rt-muban",
+  "version": "1.0.0",
+  "description": "Smart Neighborhood Management Platform for RT and Muban Communities",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend/web-app && npm install && cd ../mobile-app && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:web\" \"npm run dev:admin\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:web": "cd frontend/web-app && npm run dev",
+    "dev:admin": "cd frontend/admin-dashboard && npm run dev",
+    "dev:mobile": "cd frontend/mobile-app && npm start",
+    "build": "npm run build:backend && npm run build:web && npm run build:admin",
+    "build:backend": "cd backend && npm run build",
+    "build:web": "cd frontend/web-app && npm run build",
+    "build:admin": "cd frontend/admin-dashboard && npm run build",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend/web-app && npm test",
+    "test:unit": "jest --testPathPattern=unit",
+    "test:integration": "jest --testPathPattern=integration",
+    "test:e2e": "jest --testPathPattern=e2e",
+    "test:coverage": "jest --coverage",
+    "migrate": "cd backend/database && npm run migrate",
+    "migrate:rollback": "cd backend/database && npm run migrate:rollback",
+    "seed": "cd backend/database && npm run seed",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:build": "docker-compose build",
+    "docker:logs": "docker-compose logs -f"
+  },
+  "keywords": [
+    "neighborhood",
+    "community",
+    "governance",
+    "RT",
+    "Muban",
+    "Indonesia",
+    "Thailand",
+    "waste-banking",
+    "marketplace",
+    "emergency",
+    "patrol"
+  ],
+  "author": "UNNES & Chulalongkorn University",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/digital-rt-muban.git"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "jest": "^29.6.0",
+    "lint-staged": "^14.0.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.1.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "rt-muban-backend",
+  "version": "1.0.0",
+  "description": "Backend services for Digital RT-Muban platform",
+  "private": true,
+  "workspaces": [
+    "services/*",
+    "api-gateway",
+    "shared",
+    "database"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=api-gateway\" \"npm run dev --workspace=user-service\" \"npm run dev --workspace=administration-service\" \"npm run dev --workspace=waste-bank-service\" \"npm run dev --workspace=marketplace-service\" \"npm run dev --workspace=sos-service\" \"npm run dev --workspace=patrol-service\" \"npm run dev --workspace=notification-service\"",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "format": "npm run format --workspaces"
+  },
+  "keywords": [
+    "rt-muban",
+    "backend",
+    "microservices"
+  ],
+  "author": "UNNES & Chulalongkorn University",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
