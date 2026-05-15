@@ -35,7 +35,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: 'OneDrive - mail.unnes.ac.id/app projek/RT Apps Toyota/frontend/project-dashboard'
-        run: npm ci
+        run: npm install
 
       - name: Build static export
         working-directory: 'OneDrive - mail.unnes.ac.id/app projek/RT Apps Toyota/frontend/project-dashboard'
