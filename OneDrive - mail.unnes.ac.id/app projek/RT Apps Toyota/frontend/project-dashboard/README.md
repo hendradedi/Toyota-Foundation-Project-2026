@@ -140,12 +140,12 @@ git push -u origin main
 ```
 
 2. **Enable GitHub Pages**:
-   - Go to repository Settings → Pages
-   - Select `main` branch and `/out` folder as source
+   - Go to repository **Settings → Pages**
+   - In **Build and deployment**, set **Source** to **GitHub Actions**
    - Save
 
 3. **Automatic Deployment**:
-   - GitHub Actions will automatically build and deploy on push
+   - GitHub Actions workflow `.github/workflows/deploy-dashboard.yml` will automatically build and deploy on push
    - Dashboard will be available at: `https://your-username.github.io/your-repo/`
 
 ### Manual Deployment
