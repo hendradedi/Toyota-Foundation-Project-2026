@@ -6,6 +6,8 @@ const basePath = isGithubPages && repositoryName ? `/${repositoryName}` : ''
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
     unoptimized: true,
   },
