@@ -1,0 +1,58 @@
+name: Deploy Project Dashboard
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'OneDrive - mail.unnes.ac.id/app projek/RT Apps Toyota/frontend/project-dashboard/**'
+      - '.github/workflows/deploy-dashboard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAGES: 'true'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: 'OneDrive - mail.unnes.ac.id/app projek/RT Apps Toyota/frontend/project-dashboard'
+        run: npm install
+
+      - name: Build static export
+        working-directory: 'OneDrive - mail.unnes.ac.id/app projek/RT Apps Toyota/frontend/project-dashboard'
+        run: npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'OneDrive - mail.unnes.ac.id/app projek/RT Apps Toyota/frontend/project-dashboard/out'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

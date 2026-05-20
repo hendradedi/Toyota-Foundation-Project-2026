@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev -p 3006",
     "build": "next build",
-    "start": "next start -p 3006",
+    "start": "npx serve out -l 3006",
     "lint": "next lint",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
     "deploy": "node scripts/deploy.js"
