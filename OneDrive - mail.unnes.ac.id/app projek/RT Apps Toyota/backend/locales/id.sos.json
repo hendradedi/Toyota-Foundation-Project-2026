@@ -1,0 +1,69 @@
+{
+  "alert": {
+    "created": "Alert berhasil dibuat",
+    "updated": "Alert berhasil diperbarui",
+    "deleted": "Alert berhasil dihapus",
+    "responded": "Alert berhasil ditanggapi",
+    "cancelled": "Alert berhasil dibatalkan"
+  },
+  "alertType": {
+    "medical": "Kedaruratan Medis",
+    "fire": "Kebakaran",
+    "crime": "Kejahatan/Keamanan",
+    "accident": "Kecelakaan",
+    "other": "Kedaruratan Lainnya"
+  },
+  "alertStatus": {
+    "pending": "Menunggu",
+    "active": "Aktif",
+    "responded": "Ditanggapi",
+    "resolved": "Selesai",
+    "cancelled": "Dibatalkan"
+  },
+  "alert": {
+    "title": "Alert Kedaruratan",
+    "description": "Deskripsi Kedaruratan",
+    "location": "Lokasi",
+    "contact": "Kontak Person",
+    "phone": "Nomor Telepon",
+    "alertNumber": "Nomor Alert",
+    "createdAt": "Dibuat Pada",
+    "respondedAt": "Ditanggapi Pada",
+    "resolvedAt": "Selesai Pada",
+    "respondedBy": "Ditanggapi Oleh",
+    "responseMessage": "Pesan Tanggapan",
+    "priority": "Prioritas",
+    "high": "Tinggi",
+    "medium": "Sedang",
+    "low": "Rendah"
+  },
+  "alertActions": {
+    "create": "Buat Alert",
+    "respond": "Tanggapi Alert",
+    "resolve": "Selesaikan Alert",
+    "cancel": "Batalkan Alert",
+    "broadcast": "Siaran Alert",
+    "viewDetails": "Lihat Detail",
+    "edit": "Edit Alert",
+    "delete": "Hapus Alert"
+  },
+  "alertMessages": {
+    "noAlerts": "Tidak ada alert ditemukan",
+    "alertCreated": "Alert kedaruratan berhasil dibuat",
+    "alertResponded": "Alert berhasil ditanggapi",
+    "alertResolved": "Alert berhasil diselesaikan",
+    "alertCancelled": "Alert berhasil dibatalkan",
+    "confirmCancel": "Apakah Anda yakin ingin membatalkan alert ini?",
+    "confirmResolve": "Apakah Anda yakin ingin menandai alert ini sebagai selesai?",
+    "confirmDelete": "Apakah Anda yakin ingin menghapus alert ini?"
+  },
+  "broadcast": {
+    "title": "Siaran Alert",
+    "message": "Pesan Siaran",
+    "recipients": "Penerima",
+    "allResidents": "Semua Penduduk",
+    "selectedResidents": "Penduduk Terpilih",
+    "broadcastSent": "Siaran berhasil dikirim",
+    "broadcastFailed": "Gagal mengirim siaran"
+  }
+}

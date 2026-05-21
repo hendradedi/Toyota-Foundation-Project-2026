@@ -1,0 +1,29 @@
+{
+  "notification": {
+    "title": "Notifikasi",
+    "message": "Pesan",
+    "type": "Jenis",
+    "read": "Dibaca",
+    "unread": "Belum Dibaca",
+    "markAsRead": "Tandai sebagai Dibaca",
+    "markAllAsRead": "Tandai Semua sebagai Dibaca",
+    "deleteAll": "Hapus Semua",
+    "noNotifications": "Tidak ada notifikasi"
+  },
+  "notificationType": {
+    "info": "Informasi",
+    "warning": "Peringatan",
+    "error": "Kesalahan",
+    "success": "Berhasil",
+    "alert": "Alert",
+    "reminder": "Pengingat"
+  },
+  "notificationMessages": {
+    "newAlert": "Alert darurat baru: {{alertNumber}}",
+    "patrolReminder": "Pengingat patroli: Shift dimulai dalam {{time}}",
+    "orderUpdate": "Pesanan {{orderNumber}} diperbarui: {{status}}",
+    "pointsEarned": "Anda mendapatkan {{points}} poin dari setoran",
+    "depositVerified": "Setoran Anda telah diverifikasi",
+    "newMessage": "Pesan baru dari {{sender}}"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "validation": {
+    "required": "{{field}} is required",
+    "email": "Invalid email format",
+    "minLength": "{{field}} must be at least {{min}} characters",
+    "maxLength": "{{field}} must be at most {{max}} characters",
+    "min": "{{field}} must be at least {{min}}",
+    "max": "{{field}} must be at most {{max}}",
+    "pattern": "Invalid {{field}} format",
+    "unique": "{{field}} is already in use",
+    "passwordMatch": "Password confirmation does not match",
+    "phone": "Invalid phone number",
+    "url": "Invalid URL",
+    "date": "Invalid date",
+    "dateRange": "Invalid date range",
+    "number": "Must be a number",
+    "integer": "Must be an integer",
+    "positiveNumber": "Must be a positive number"
+  },
+  "auth": {
+    "unauthorized": "Unauthorized",
+    "forbidden": "Access denied",
+    "invalidToken": "Invalid token",
+    "tokenExpired": "Token has expired",
+    "invalidCredentials": "Invalid email or password",
+    "accountLocked": "Account is locked",
+    "accountNotVerified": "Account is not verified",
+    "sessionExpired": "Session has expired"
+  },
+  "server": {
+    "internal": "Internal server error",
+    "database": "Database error",
+    "network": "Network error",
+    "timeout": "Request timeout",
+    "serviceUnavailable": "Service unavailable"
+  },
+  "notFound": {
+    "resource": "Resource not found",
+    "user": "User not found",
+    "page": "Page not found",
+    "alert": "Alert not found",
+    "patrol": "Patrol not found",
+    "order": "Order not found",
+    "product": "Product not found",
+    "deposit": "Deposit not found",
+    "category": "Category not found"
+  },
+  "business": {
+    "insufficientStock": "Insufficient stock",
+    "insufficientPoints": "Insufficient points",
+    "orderCannotBeModified": "Order cannot be modified",
+    "alertAlreadyResolved": "Alert is already resolved",
+    "patrolAlreadyStarted": "Patrol has already started",
+    "duplicateEntry": "Duplicate entry detected"
+  }
+}

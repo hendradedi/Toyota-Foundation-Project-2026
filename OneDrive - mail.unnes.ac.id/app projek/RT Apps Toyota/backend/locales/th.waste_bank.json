@@ -1,0 +1,103 @@
+{
+  "deposit": {
+    "created": "บันทึกการฝากสำเร็จ",
+    "updated": "อัปเดตการฝากสำเร็จ",
+    "deleted": "ลบการฝากสำเร็จ"
+  },
+  "depositStatus": {
+    "pending": "รอดำเนินการ",
+    "verified": "ยืนยันแล้ว",
+    "completed": "เสร็จสิ้น",
+    "cancelled": "ยกเลิก"
+  },
+  "deposit": {
+    "title": "การฝากขยะ",
+    "depositNumber": "หมายเลขการฝาก",
+    "resident": "ผู้อยู่อาศัย",
+    "residentName": "ชื่อผู้อยู่อาศัย",
+    "wasteCategory": "หมวดหมู่ขยะ",
+    "weight": "น้ำหนัก (กก.)",
+    "pricePerKg": "ราคาต่อกก.",
+    "totalPoints": "คะแนนรวม",
+    "totalAmount": "จำนวนเงินรวม",
+    "status": "สถานะ",
+    "collector": "ผู้รวบรวม",
+    "collectorName": "ชื่อผู้รวบรวม",
+    "depositDate": "วันที่ฝาก",
+    "verifiedAt": "ยืนยันเมื่อ",
+    "verifiedBy": "ยืนยันโดย",
+    "notes": "บันทึก"
+  },
+  "depositActions": {
+    "create": "บันทึกการฝาก",
+    "edit": "แก้ไขการฝาก",
+    "delete": "ลบการฝาก",
+    "verify": "ยืนยันการฝาก",
+    "complete": "เสร็จสิ้นการฝาก",
+    "cancel": "ยกเลิกการฝาก"
+  },
+  "depositMessages": {
+    "noDeposits": "ไม่พบการฝาก",
+    "depositCreated": "บันทึกการฝากสำเร็จ",
+    "depositUpdated": "อัปเดตการฝากสำเร็จ",
+    "depositDeleted": "ลบการฝากสำเร็จ",
+    "depositVerified": "ยืนยันการฝากสำเร็จ",
+    "depositCompleted": "เสร็จสิ้นการฝากสำเร็จ",
+    "confirmDelete": "คุณแน่ใจหรือไม่ว่าต้องการลบการฝากนี้?"
+  },
+  "category": {
+    "title": "หมวดหมู่ขยะ",
+    "name": "ชื่อหมวดหมู่",
+    "description": "คำอธิบาย",
+    "pricePerKg": "ราคาต่อกก.",
+    "pointsPerKg": "คะแนนต่อกก.",
+    "unit": "หน่วย",
+    "isActive": "ใช้งาน"
+  },
+  "categoryType": {
+    "plastic": "พลาสติก",
+    "paper": "กระดาษ",
+    "metal": "โลหะ",
+    "glass": "แก้ว",
+    "organic": "อินทรีย์",
+    "electronic": "อิเล็กทรอนิกส์",
+    "textile": "สิ่งทอ",
+    "other": "อื่นๆ"
+  },
+  "categoryActions": {
+    "create": "เพิ่มหมวดหมู่",
+    "edit": "แก้ไขหมวดหมู่",
+    "delete": "ลบหมวดหมู่"
+  },
+  "categoryMessages": {
+    "noCategories": "ไม่พบหมวดหมู่",
+    "categoryCreated": "เพิ่มหมวดหมู่สำเร็จ",
+    "categoryUpdated": "อัปเดตหมวดหมู่สำเร็จ",
+    "categoryDeleted": "ลบหมวดหมู่สำเร็จ",
+    "confirmDelete": "คุณแน่ใจหรือไม่ว่าต้องการลบหมวดหมู่นี้?"
+  },
+  "points": {
+    "title": "คะแนน",
+    "currentPoints": "คะแนนปัจจุบัน",
+    "totalEarned": "รวมที่ได้รับ",
+    "totalRedeemed": "รวมที่แลกแล้ว",
+    "transactionHistory": "ประวัติธุรกรรม",
+    "redeemPoints": "แลกคะแนน",
+    "pointsEarned": "คะแนนที่ได้รับ",
+    "pointsRedeemed": "คะแนนที่แลกแล้ว",
+    "transactionDate": "วันที่ธุรกรรม",
+    "transactionType": "ประเภทธุรกรรม",
+    "description": "คำอธิบาย"
+  },
+  "pointsActions": {
+    "viewHistory": "ดูประวัติ",
+    "redeem": "แลกคะแนน",
+    "transfer": "โอนคะแนน"
+  },
+  "pointsMessages": {
+    "insufficientPoints": "คะแนนไม่เพียงพอ",
+    "pointsRedeemed": "แลกคะแนนสำเร็จ",
+    "pointsTransferred": "โอนคะแนนสำเร็จ",
+    "minimumRedemption": "การแลกขั้นต่ำคือ {{minPoints}} คะแนน"
+  }
+}

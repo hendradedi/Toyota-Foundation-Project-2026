@@ -1,0 +1,132 @@
+{
+  "marketplace": {
+    "created": "Marketplace created successfully",
+    "updated": "Marketplace updated successfully",
+    "deleted": "Marketplace deleted successfully"
+  },
+  "marketplaceType": {
+    "physical": "Physical Store",
+    "online": "Online Store",
+    "hybrid": "Hybrid"
+  },
+  "marketplaceStatus": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "suspended": "Suspended",
+    "pending": "Pending"
+  },
+  "marketplace": {
+    "title": "Marketplace",
+    "name": "Store Name",
+    "description": "Description",
+    "type": "Type",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "website": "Website",
+    "owner": "Owner",
+    "ownerName": "Owner Name",
+    "ownerPhone": "Owner Phone",
+    "openingHours": "Opening Hours",
+    "categories": "Categories",
+    "products": "Products",
+    "orders": "Orders",
+    "rating": "Rating",
+    "reviews": "Reviews"
+  },
+  "marketplaceActions": {
+    "create": "Create Store",
+    "edit": "Edit Store",
+    "delete": "Delete Store",
+    "viewProducts": "View Products",
+    "viewOrders": "View Orders",
+    "viewCustomers": "View Customers",
+    "manageCategories": "Manage Categories",
+    "analytics": "Analytics"
+  },
+  "marketplaceMessages": {
+    "noMarketplaces": "No marketplaces found",
+    "marketplaceCreated": "Marketplace created successfully",
+    "marketplaceUpdated": "Marketplace updated successfully",
+    "marketplaceDeleted": "Marketplace deleted successfully",
+    "confirmDelete": "Are you sure you want to delete this marketplace?",
+    "storeClosed": "Store is currently closed",
+    "storeOpen": "Store is currently open"
+  },
+  "product": {
+    "title": "Product",
+    "name": "Product Name",
+    "description": "Description",
+    "price": "Price",
+    "quantity": "Quantity",
+    "category": "Category",
+    "image": "Image",
+    "status": "Status",
+    "stock": "Stock",
+    "sold": "Sold",
+    "rating": "Rating",
+    "reviews": "Reviews"
+  },
+  "productActions": {
+    "create": "Add Product",
+    "edit": "Edit Product",
+    "delete": "Delete Product",
+    "viewDetails": "View Details",
+    "manageStock": "Manage Stock"
+  },
+  "productMessages": {
+    "noProducts": "No products found",
+    "productCreated": "Product added successfully",
+    "productUpdated": "Product updated successfully",
+    "productDeleted": "Product deleted successfully",
+    "confirmDelete": "Are you sure you want to delete this product?",
+    "outOfStock": "Out of stock",
+    "lowStock": "Low stock"
+  },
+  "order": {
+    "title": "Order",
+    "orderNumber": "Order Number",
+    "customer": "Customer",
+    "customerName": "Customer Name",
+    "customerPhone": "Customer Phone",
+    "items": "Items",
+    "quantity": "Quantity",
+    "unitPrice": "Unit Price",
+    "totalPrice": "Total Price",
+    "status": "Status",
+    "paymentMethod": "Payment Method",
+    "paymentStatus": "Payment Status",
+    "deliveryAddress": "Delivery Address",
+    "deliveryStatus": "Delivery Status",
+    "notes": "Notes",
+    "createdAt": "Created At",
+    "updatedAt": "Updated At"
+  },
+  "orderStatus": {
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "processing": "Processing",
+    "shipped": "Shipped",
+    "delivered": "Delivered",
+    "cancelled": "Cancelled",
+    "refunded": "Refunded"
+  },
+  "orderActions": {
+    "create": "Create Order",
+    "edit": "Edit Order",
+    "delete": "Delete Order",
+    "viewDetails": "View Details",
+    "confirm": "Confirm Order",
+    "cancel": "Cancel Order",
+    "track": "Track Order"
+  },
+  "orderMessages": {
+    "noOrders": "No orders found",
+    "orderCreated": "Order created successfully",
+    "orderUpdated": "Order updated successfully",
+    "orderDeleted": "Order deleted successfully",
+    "confirmDelete": "Are you sure you want to delete this order?",
+    "orderConfirmed": "Order confirmed successfully",
+    "orderCancelled": "Order cancelled successfully"
+  }
+}

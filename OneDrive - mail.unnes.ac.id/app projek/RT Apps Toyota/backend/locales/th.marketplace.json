@@ -1,0 +1,132 @@
+{
+  "marketplace": {
+    "created": "สร้าง Marketplace สำเร็จ",
+    "updated": "อัปเดต Marketplace สำเร็จ",
+    "deleted": "ลบ Marketplace สำเร็จ"
+  },
+  "marketplaceType": {
+    "physical": "ร้านค้าจริง",
+    "online": "ร้านค้าออนไลน์",
+    "hybrid": "แบบผสม"
+  },
+  "marketplaceStatus": {
+    "active": "ใช้งาน",
+    "inactive": "ไม่ใช้งาน",
+    "suspended": "ถูกระงับ",
+    "pending": "รอดำเนินการ"
+  },
+  "marketplace": {
+    "title": "Marketplace",
+    "name": "ชื่อร้านค้า",
+    "description": "คำอธิบาย",
+    "type": "ประเภท",
+    "address": "ที่อยู่",
+    "phone": "โทรศัพท์",
+    "email": "อีเมล",
+    "website": "เว็บไซต์",
+    "owner": "เจ้าของ",
+    "ownerName": "ชื่อเจ้าของ",
+    "ownerPhone": "โทรศัพท์เจ้าของ",
+    "openingHours": "เวลาเปิดทำการ",
+    "categories": "หมวดหมู่",
+    "products": "สินค้า",
+    "orders": "คำสั่งซื้อ",
+    "rating": "คะแนน",
+    "reviews": "รีวิว"
+  },
+  "marketplaceActions": {
+    "create": "สร้างร้านค้า",
+    "edit": "แก้ไขร้านค้า",
+    "delete": "ลบร้านค้า",
+    "viewProducts": "ดูสินค้า",
+    "viewOrders": "ดูคำสั่งซื้อ",
+    "viewCustomers": "ดูลูกค้า",
+    "manageCategories": "จัดการหมวดหมู่",
+    "analytics": "การวิเคราะห์"
+  },
+  "marketplaceMessages": {
+    "noMarketplaces": "ไม่พบ Marketplace",
+    "marketplaceCreated": "สร้าง Marketplace สำเร็จ",
+    "marketplaceUpdated": "อัปเดต Marketplace สำเร็จ",
+    "marketplaceDeleted": "ลบ Marketplace สำเร็จ",
+    "confirmDelete": "คุณแน่ใจหรือไม่ว่าต้องการลบ Marketplace นี้?",
+    "storeClosed": "ร้านค้าปิดอยู่",
+    "storeOpen": "ร้านค้าเปิดอยู่"
+  },
+  "product": {
+    "title": "สินค้า",
+    "name": "ชื่อสินค้า",
+    "description": "คำอธิบาย",
+    "price": "ราคา",
+    "quantity": "จำนวน",
+    "category": "หมวดหมู่",
+    "image": "รูปภาพ",
+    "status": "สถานะ",
+    "stock": "สต๊อก",
+    "sold": "ขายแล้ว",
+    "rating": "คะแนน",
+    "reviews": "รีวิว"
+  },
+  "productActions": {
+    "create": "เพิ่มสินค้า",
+    "edit": "แก้ไขสินค้า",
+    "delete": "ลบสินค้า",
+    "viewDetails": "ดูรายละเอียด",
+    "manageStock": "จัดการสต๊อก"
+  },
+  "productMessages": {
+    "noProducts": "ไม่พบสินค้า",
+    "productCreated": "เพิ่มสินค้าสำเร็จ",
+    "productUpdated": "อัปเดตสินค้าสำเร็จ",
+    "productDeleted": "ลบสินค้าสำเร็จ",
+    "confirmDelete": "คุณแน่ใจหรือไม่ว่าต้องการลบสินค้านี้?",
+    "outOfStock": "สินค้าหมด",
+    "lowStock": "สต๊อกน้อย"
+  },
+  "order": {
+    "title": "คำสั่งซื้อ",
+    "orderNumber": "หมายเลขคำสั่งซื้อ",
+    "customer": "ลูกค้า",
+    "customerName": "ชื่อลูกค้า",
+    "customerPhone": "โทรศัพท์ลูกค้า",
+    "items": "สินค้า",
+    "quantity": "จำนวน",
+    "unitPrice": "ราคาต่อหน่วย",
+    "totalPrice": "ราคารวม",
+    "status": "สถานะ",
+    "paymentMethod": "วิธีการชำระเงิน",
+    "paymentStatus": "สถานะการชำระเงิน",
+    "deliveryAddress": "ที่อยู่จัดส่ง",
+    "deliveryStatus": "สถานะการจัดส่ง",
+    "notes": "บันทึก",
+    "createdAt": "สร้างเมื่อ",
+    "updatedAt": "อัปเดตเมื่อ"
+  },
+  "orderStatus": {
+    "pending": "รอดำเนินการ",
+    "confirmed": "ยืนยันแล้ว",
+    "processing": "กำลังดำเนินการ",
+    "shipped": "ส่งแล้ว",
+    "delivered": "ส่งถึงแล้ว",
+    "cancelled": "ยกเลิก",
+    "refunded": "คืนเงิน"
+  },
+  "orderActions": {
+    "create": "สร้างคำสั่งซื้อ",
+    "edit": "แก้ไขคำสั่งซื้อ",
+    "delete": "ลบคำสั่งซื้อ",
+    "viewDetails": "ดูรายละเอียด",
+    "confirm": "ยืนยันคำสั่งซื้อ",
+    "cancel": "ยกเลิกคำสั่งซื้อ",
+    "track": "ติดตามคำสั่งซื้อ"
+  },
+  "orderMessages": {
+    "noOrders": "ไม่พบคำสั่งซื้อ",
+    "orderCreated": "สร้างคำสั่งซื้อสำเร็จ",
+    "orderUpdated": "อัปเดตคำสั่งซื้อสำเร็จ",
+    "orderDeleted": "ลบคำสั่งซื้อสำเร็จ",
+    "confirmDelete": "คุณแน่ใจหรือไม่ว่าต้องการลบคำสั่งซื้อนี้?",
+    "orderConfirmed": "ยืนยันคำสั่งซื้อสำเร็จ",
+    "orderCancelled": "ยกเลิกคำสั่งซื้อสำเร็จ"
+  }
+}

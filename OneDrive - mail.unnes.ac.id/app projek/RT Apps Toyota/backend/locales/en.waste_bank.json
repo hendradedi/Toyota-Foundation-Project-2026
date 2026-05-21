@@ -1,0 +1,103 @@
+{
+  "deposit": {
+    "created": "Deposit recorded successfully",
+    "updated": "Deposit updated successfully",
+    "deleted": "Deposit deleted successfully"
+  },
+  "depositStatus": {
+    "pending": "Pending",
+    "verified": "Verified",
+    "completed": "Completed",
+    "cancelled": "Cancelled"
+  },
+  "deposit": {
+    "title": "Waste Deposit",
+    "depositNumber": "Deposit Number",
+    "resident": "Resident",
+    "residentName": "Resident Name",
+    "wasteCategory": "Waste Category",
+    "weight": "Weight (kg)",
+    "pricePerKg": "Price per Kg",
+    "totalPoints": "Total Points",
+    "totalAmount": "Total Amount",
+    "status": "Status",
+    "collector": "Collector",
+    "collectorName": "Collector Name",
+    "depositDate": "Deposit Date",
+    "verifiedAt": "Verified At",
+    "verifiedBy": "Verified By",
+    "notes": "Notes"
+  },
+  "depositActions": {
+    "create": "Record Deposit",
+    "edit": "Edit Deposit",
+    "delete": "Delete Deposit",
+    "verify": "Verify Deposit",
+    "complete": "Complete Deposit",
+    "cancel": "Cancel Deposit"
+  },
+  "depositMessages": {
+    "noDeposits": "No deposits found",
+    "depositCreated": "Deposit recorded successfully",
+    "depositUpdated": "Deposit updated successfully",
+    "depositDeleted": "Deposit deleted successfully",
+    "depositVerified": "Deposit verified successfully",
+    "depositCompleted": "Deposit completed successfully",
+    "confirmDelete": "Are you sure you want to delete this deposit?"
+  },
+  "category": {
+    "title": "Waste Category",
+    "name": "Category Name",
+    "description": "Description",
+    "pricePerKg": "Price per Kg",
+    "pointsPerKg": "Points per Kg",
+    "unit": "Unit",
+    "isActive": "Active"
+  },
+  "categoryType": {
+    "plastic": "Plastic",
+    "paper": "Paper",
+    "metal": "Metal",
+    "glass": "Glass",
+    "organic": "Organic",
+    "electronic": "Electronic",
+    "textile": "Textile",
+    "other": "Other"
+  },
+  "categoryActions": {
+    "create": "Add Category",
+    "edit": "Edit Category",
+    "delete": "Delete Category"
+  },
+  "categoryMessages": {
+    "noCategories": "No categories found",
+    "categoryCreated": "Category added successfully",
+    "categoryUpdated": "Category updated successfully",
+    "categoryDeleted": "Category deleted successfully",
+    "confirmDelete": "Are you sure you want to delete this category?"
+  },
+  "points": {
+    "title": "Points",
+    "currentPoints": "Current Points",
+    "totalEarned": "Total Earned",
+    "totalRedeemed": "Total Redeemed",
+    "transactionHistory": "Transaction History",
+    "redeemPoints": "Redeem Points",
+    "pointsEarned": "Points Earned",
+    "pointsRedeemed": "Points Redeemed",
+    "transactionDate": "Transaction Date",
+    "transactionType": "Transaction Type",
+    "description": "Description"
+  },
+  "pointsActions": {
+    "viewHistory": "View History",
+    "redeem": "Redeem Points",
+    "transfer": "Transfer Points"
+  },
+  "pointsMessages": {
+    "insufficientPoints": "Insufficient points",
+    "pointsRedeemed": "Points redeemed successfully",
+    "pointsTransferred": "Points transferred successfully",
+    "minimumRedemption": "Minimum redemption is {{minPoints}} points"
+  }
+}

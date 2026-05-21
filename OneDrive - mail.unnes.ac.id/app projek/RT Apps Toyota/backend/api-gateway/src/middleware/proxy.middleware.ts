@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { createProxyMiddleware } from 'http-proxy-middleware';
+import { fixRequestBody } from 'http-proxy-middleware';
 import { config } from '@rt-muban/shared';
 import logger from '@rt-muban/shared/src/utils/logger';
 
@@ -16,6 +17,7 @@ const SERVICE_URLS = {
 export const userServiceProxy = createProxyMiddleware({
   target: SERVICE_URLS.user,
   changeOrigin: true,
+  onProxyReq: fixRequestBody,
   pathRewrite: {
     '^/api/users': '/api/users',
     '^/api/auth': '/api/auth',
@@ -37,6 +39,7 @@ export const userServiceProxy = createProxyMiddleware({
 export const wasteBankServiceProxy = createProxyMiddleware({
   target: SERVICE_URLS.wasteBank,
   changeOrigin: true,
+  onProxyReq: fixRequestBody,
   pathRewrite: {
     '^/api/waste-bank': '/api/waste-bank',
   },
@@ -57,6 +60,7 @@ export const wasteBankServiceProxy = createProxyMiddleware({
 export const marketplaceServiceProxy = createProxyMiddleware({
   target: SERVICE_URLS.marketplace,
   changeOrigin: true,
+  onProxyReq: fixRequestBody,
   pathRewrite: {
     '^/api/marketplace': '/api/marketplace',
   },
@@ -77,6 +81,7 @@ export const marketplaceServiceProxy = createProxyMiddleware({
 export const sosServiceProxy = createProxyMiddleware({
   target: SERVICE_URLS.sos,
   changeOrigin: true,
+  onProxyReq: fixRequestBody,
   pathRewrite: {
     '^/api/sos': '/api/sos',
   },
@@ -97,6 +102,7 @@ export const sosServiceProxy = createProxyMiddleware({
 export const patrolServiceProxy = createProxyMiddleware({
   target: SERVICE_URLS.patrol,
   changeOrigin: true,
+  onProxyReq: fixRequestBody,
   pathRewrite: {
     '^/api/patrol': '/api/patrol',
   },

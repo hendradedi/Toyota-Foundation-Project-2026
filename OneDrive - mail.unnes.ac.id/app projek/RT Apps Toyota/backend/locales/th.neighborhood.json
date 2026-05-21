@@ -1,0 +1,75 @@
+{
+  "neighborhood": {
+    "title": "ชุมชน",
+    "name": "ชื่อชุมชน",
+    "code": "รหัสชุมชน",
+    "description": "คำอธิบาย",
+    "address": "ที่อยู่",
+    "totalHouseholds": "จำนวนครัวเรือนทั้งหมด",
+    "totalResidents": "จำนวนผู้อยู่อาศัยทั้งหมด",
+    "chairman": "ประธาน",
+    "viceChairman": "รองประธาน",
+    "secretary": "เลขานุการ",
+    "treasurer": "เหรัญญิก"
+  },
+  "household": {
+    "title": "ครัวเรือน",
+    "householdNumber": "หมายเลขครัวเรือน",
+    "headOfHousehold": "หัวหน้าครัวเรือน",
+    "address": "ที่อยู่",
+    "phone": "โทรศัพท์",
+    "totalMembers": "จำนวนสมาชิก",
+    "status": "สถานะ",
+    "joinDate": "วันที่เข้าร่วม"
+  },
+  "resident": {
+    "title": "ผู้อยู่อาศัย",
+    "name": "ชื่อ",
+    "idNumber": "หมายเลขบัตรประชาชน",
+    "dateOfBirth": "วันเกิด",
+    "gender": "เพศ",
+    "male": "ชาย",
+    "female": "หญิง",
+    "occupation": "อาชีพ",
+    "phone": "โทรศัพท์",
+    "email": "อีเมล",
+    "status": "สถานะ"
+  },
+  "facility": {
+    "title": "สิ่งอำนวยความสะดวก",
+    "name": "ชื่อสิ่งอำนวยความสะดวก",
+    "type": "ประเภท",
+    "description": "คำอธิบาย",
+    "location": "ตำแหน่งที่ตั้ง",
+    "capacity": "ความจุ",
+    "status": "สถานะ",
+    "openingHours": "เวลาเปิดทำการ"
+  },
+  "facilityType": {
+    "communityHall": "ศาลาชุมชน",
+    "playground": "สนามเด็กเล่น",
+    "park": "สวนสาธารณะ",
+    "sportsFacility": "สิ่งอำนวยความสะดวกด้านกีฬา",
+    "library": "ห้องสมุด",
+    "healthCenter": "ศูนย์สุขภาพ",
+    "other": "อื่นๆ"
+  },
+  "actions": {
+    "viewDetails": "ดูรายละเอียด",
+    "edit": "แก้ไข",
+    "delete": "ลบ",
+    "addResident": "เพิ่มผู้อยู่อาศัย",
+    "addHousehold": "เพิ่มครัวเรือน",
+    "addFacility": "เพิ่มสิ่งอำนวยความสะดวก"
+  },
+  "messages": {
+    "noNeighborhoods": "ไม่พบชุมชน",
+    "noHouseholds": "ไม่พบครัวเรือน",
+    "noResidents": "ไม่พบผู้อยู่อาศัย",
+    "noFacilities": "ไม่พบสิ่งอำนวยความสะดวก",
+    "created": "สร้างสำเร็จ",
+    "updated": "อัปเดตสำเร็จ",
+    "deleted": "ลบสำเร็จ",
+    "confirmDelete": "คุณแน่ใจหรือไม่ว่าต้องการลบ?"
+  }
+}

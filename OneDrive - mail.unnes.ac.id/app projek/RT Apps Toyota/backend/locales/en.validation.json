@@ -1,0 +1,20 @@
+{
+  "validation": {
+    "required": "{{field}} is required",
+    "email": "Invalid email format",
+    "minLength": "{{field}} must be at least {{min}} characters",
+    "maxLength": "{{field}} must be at most {{max}} characters",
+    "min": "{{field}} must be at least {{min}}",
+    "max": "{{field}} must be at most {{max}}",
+    "pattern": "Invalid {{field}} format",
+    "unique": "{{field}} is already in use",
+    "passwordMatch": "Password confirmation does not match",
+    "phone": "Invalid phone number",
+    "url": "Invalid URL",
+    "date": "Invalid date",
+    "dateRange": "Invalid date range",
+    "number": "Must be a number",
+    "integer": "Must be an integer",
+    "positiveNumber": "Must be a positive number"
+  }
+}

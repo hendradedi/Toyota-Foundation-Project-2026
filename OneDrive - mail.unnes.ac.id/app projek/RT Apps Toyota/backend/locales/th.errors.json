@@ -1,0 +1,56 @@
+{
+  "validation": {
+    "required": "ต้องระบุ {{field}}",
+    "email": "รูปแบบอีเมลไม่ถูกต้อง",
+    "minLength": "{{field}} ต้องมีอย่างน้อย {{min}} ตัวอักษร",
+    "maxLength": "{{field}} ต้องมีไม่เกิน {{max}} ตัวอักษร",
+    "min": "{{field}} ต้องมีอย่างน้อย {{min}}",
+    "max": "{{field}} ต้องมีไม่เกิน {{max}}",
+    "pattern": "รูปแบบ {{field}} ไม่ถูกต้อง",
+    "unique": "{{field}} ถูกใช้แล้ว",
+    "passwordMatch": "การยืนยันรหัสผ่านไม่ตรงกัน",
+    "phone": "หมายเลขโทรศัพท์ไม่ถูกต้อง",
+    "url": "URL ไม่ถูกต้อง",
+    "date": "วันที่ไม่ถูกต้อง",
+    "dateRange": "ช่วงวันที่ไม่ถูกต้อง",
+    "number": "ต้องเป็นตัวเลข",
+    "integer": "ต้องเป็นจำนวนเต็ม",
+    "positiveNumber": "ต้องเป็นตัวเลขบวก"
+  },
+  "auth": {
+    "unauthorized": "ไม่ได้รับอนุญาต",
+    "forbidden": "การเข้าถึงถูกปฏิเสธ",
+    "invalidToken": "โทเค็นไม่ถูกต้อง",
+    "tokenExpired": "โทเค็นหมดอายุ",
+    "invalidCredentials": "อีเมลหรือรหัสผ่านไม่ถูกต้อง",
+    "accountLocked": "บัญชีถูกล็อค",
+    "accountNotVerified": "บัญชีไม่ได้รับการยืนยัน",
+    "sessionExpired": "เซสชันหมดอายุ"
+  },
+  "server": {
+    "internal": "ข้อผิดพลาดภายในเซิร์ฟเวอร์",
+    "database": "ข้อผิดพลาดฐานข้อมูล",
+    "network": "ข้อผิดพลาดเครือข่าย",
+    "timeout": "หมดเวลาคำขอ",
+    "serviceUnavailable": "บริการไม่พร้อมใช้งาน"
+  },
+  "notFound": {
+    "resource": "ไม่พบทรัพยากร",
+    "user": "ไม่พบผู้ใช้",
+    "page": "ไม่พบหน้า",
+    "alert": "ไม่พบการแจ้งเตือน",
+    "patrol": "ไม่พบการลาดตระเวน",
+    "order": "ไม่พบคำสั่งซื้อ",
+    "product": "ไม่พบสินค้า",
+    "deposit": "ไม่พบการฝาก",
+    "category": "ไม่พบหมวดหมู่"
+  },
+  "business": {
+    "insufficientStock": "สต๊อกไม่เพียงพอ",
+    "insufficientPoints": "คะแนนไม่เพียงพอ",
+    "orderCannotBeModified": "ไม่สามารถแก้ไขคำสั่งซื้อได้",
+    "alertAlreadyResolved": "การแจ้งเตือนได้รับการแก้ไขแล้ว",
+    "patrolAlreadyStarted": "การลาดตระเวนเริ่มต้นแล้ว",
+    "duplicateEntry": "ตรวจพบรายการซ้ำ"
+  }
+}

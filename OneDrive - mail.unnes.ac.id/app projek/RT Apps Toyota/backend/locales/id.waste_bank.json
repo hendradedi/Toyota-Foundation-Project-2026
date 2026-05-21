@@ -1,0 +1,103 @@
+{
+  "deposit": {
+    "created": "Setoran berhasil dicatat",
+    "updated": "Setoran berhasil diperbarui",
+    "deleted": "Setoran berhasil dihapus"
+  },
+  "depositStatus": {
+    "pending": "Menunggu",
+    "verified": "Terverifikasi",
+    "completed": "Selesai",
+    "cancelled": "Dibatalkan"
+  },
+  "deposit": {
+    "title": "Setoran Sampah",
+    "depositNumber": "Nomor Setoran",
+    "resident": "Penduduk",
+    "residentName": "Nama Penduduk",
+    "wasteCategory": "Kategori Sampah",
+    "weight": "Berat (kg)",
+    "pricePerKg": "Harga per Kg",
+    "totalPoints": "Total Poin",
+    "totalAmount": "Total Nilai",
+    "status": "Status",
+    "collector": "Pengumpul",
+    "collectorName": "Nama Pengumpul",
+    "depositDate": "Tanggal Setoran",
+    "verifiedAt": "Terverifikasi Pada",
+    "verifiedBy": "Diverifikasi Oleh",
+    "notes": "Catatan"
+  },
+  "depositActions": {
+    "create": "Catat Setoran",
+    "edit": "Edit Setoran",
+    "delete": "Hapus Setoran",
+    "verify": "Verifikasi Setoran",
+    "complete": "Selesaikan Setoran",
+    "cancel": "Batalkan Setoran"
+  },
+  "depositMessages": {
+    "noDeposits": "Tidak ada setoran ditemukan",
+    "depositCreated": "Setoran berhasil dicatat",
+    "depositUpdated": "Setoran berhasil diperbarui",
+    "depositDeleted": "Setoran berhasil dihapus",
+    "depositVerified": "Setoran berhasil diverifikasi",
+    "depositCompleted": "Setoran berhasil diselesaikan",
+    "confirmDelete": "Apakah Anda yakin ingin menghapus setoran ini?"
+  },
+  "category": {
+    "title": "Kategori Sampah",
+    "name": "Nama Kategori",
+    "description": "Deskripsi",
+    "pricePerKg": "Harga per Kg",
+    "pointsPerKg": "Poin per Kg",
+    "unit": "Satuan",
+    "isActive": "Aktif"
+  },
+  "categoryType": {
+    "plastic": "Plastik",
+    "paper": "Kertas",
+    "metal": "Logam",
+    "glass": "Kaca",
+    "organic": "Organik",
+    "electronic": "Elektronik",
+    "textile": "Tekstil",
+    "other": "Lainnya"
+  },
+  "categoryActions": {
+    "create": "Tambah Kategori",
+    "edit": "Edit Kategori",
+    "delete": "Hapus Kategori"
+  },
+  "categoryMessages": {
+    "noCategories": "Tidak ada kategori ditemukan",
+    "categoryCreated": "Kategori berhasil ditambahkan",
+    "categoryUpdated": "Kategori berhasil diperbarui",
+    "categoryDeleted": "Kategori berhasil dihapus",
+    "confirmDelete": "Apakah Anda yakin ingin menghapus kategori ini?"
+  },
+  "points": {
+    "title": "Poin",
+    "currentPoints": "Poin Saat Ini",
+    "totalEarned": "Total Diperoleh",
+    "totalRedeemed": "Total Ditukar",
+    "transactionHistory": "Riwayat Transaksi",
+    "redeemPoints": "Tukar Poin",
+    "pointsEarned": "Poin Diperoleh",
+    "pointsRedeemed": "Poin Ditukar",
+    "transactionDate": "Tanggal Transaksi",
+    "transactionType": "Jenis Transaksi",
+    "description": "Deskripsi"
+  },
+  "pointsActions": {
+    "viewHistory": "Lihat Riwayat",
+    "redeem": "Tukar Poin",
+    "transfer": "Transfer Poin"
+  },
+  "pointsMessages": {
+    "insufficientPoints": "Poin tidak mencukupi",
+    "pointsRedeemed": "Poin berhasil ditukar",
+    "pointsTransferred": "Poin berhasil ditransfer",
+    "minimumRedemption": "Minimum penukaran adalah {{minPoints}} poin"
+  }
+}

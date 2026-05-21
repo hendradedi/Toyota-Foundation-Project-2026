@@ -1,0 +1,20 @@
+{
+  "validation": {
+    "required": "{{field}} wajib diisi",
+    "email": "Format email tidak valid",
+    "minLength": "{{field}} harus minimal {{min}} karakter",
+    "maxLength": "{{field}} harus maksimal {{max}} karakter",
+    "min": "{{field}} harus minimal {{min}}",
+    "max": "{{field}} harus maksimal {{max}}",
+    "pattern": "Format {{field}} tidak valid",
+    "unique": "{{field}} sudah digunakan",
+    "passwordMatch": "Konfirmasi kata sandi tidak cocok",
+    "phone": "Nomor telepon tidak valid",
+    "url": "URL tidak valid",
+    "date": "Tanggal tidak valid",
+    "dateRange": "Rentang tanggal tidak valid",
+    "number": "Harus berupa angka",
+    "integer": "Harus berupa bilangan bulat",
+    "positiveNumber": "Harus berupa angka positif"
+  }
+}

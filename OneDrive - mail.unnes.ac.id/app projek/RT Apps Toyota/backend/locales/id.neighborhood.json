@@ -1,0 +1,75 @@
+{
+  "neighborhood": {
+    "title": "RT/RW",
+    "name": "Nama RT/RW",
+    "code": "Kode RT/RW",
+    "description": "Deskripsi",
+    "address": "Alamat",
+    "totalHouseholds": "Total Rumah Tangga",
+    "totalResidents": "Total Penduduk",
+    "chairman": "Ketua",
+    "viceChairman": "Wakil Ketua",
+    "secretary": "Sekretaris",
+    "treasurer": "Bendahara"
+  },
+  "household": {
+    "title": "Rumah Tangga",
+    "householdNumber": "Nomor KK",
+    "headOfHousehold": "Kepala Keluarga",
+    "address": "Alamat",
+    "phone": "Telepon",
+    "totalMembers": "Jumlah Anggota",
+    "status": "Status",
+    "joinDate": "Tanggal Bergabung"
+  },
+  "resident": {
+    "title": "Penduduk",
+    "name": "Nama",
+    "idNumber": "NIK",
+    "dateOfBirth": "Tanggal Lahir",
+    "gender": "Jenis Kelamin",
+    "male": "Laki-laki",
+    "female": "Perempuan",
+    "occupation": "Pekerjaan",
+    "phone": "Telepon",
+    "email": "Email",
+    "status": "Status"
+  },
+  "facility": {
+    "title": "Fasilitas",
+    "name": "Nama Fasilitas",
+    "type": "Jenis",
+    "description": "Deskripsi",
+    "location": "Lokasi",
+    "capacity": "Kapasitas",
+    "status": "Status",
+    "openingHours": "Jam Buka"
+  },
+  "facilityType": {
+    "communityHall": "Balai Warga",
+    "playground": "Taman Bermain",
+    "park": "Taman",
+    "sportsFacility": "Fasilitas Olahraga",
+    "library": "Perpustakaan",
+    "healthCenter": "Puskesmas",
+    "other": "Lainnya"
+  },
+  "actions": {
+    "viewDetails": "Lihat Detail",
+    "edit": "Edit",
+    "delete": "Hapus",
+    "addResident": "Tambah Penduduk",
+    "addHousehold": "Tambah Rumah Tangga",
+    "addFacility": "Tambah Fasilitas"
+  },
+  "messages": {
+    "noNeighborhoods": "Tidak ada RT/RW ditemukan",
+    "noHouseholds": "Tidak ada rumah tangga ditemukan",
+    "noResidents": "Tidak ada penduduk ditemukan",
+    "noFacilities": "Tidak ada fasilitas ditemukan",
+    "created": "Berhasil dibuat",
+    "updated": "Berhasil diperbarui",
+    "deleted": "Berhasil dihapus",
+    "confirmDelete": "Apakah Anda yakin ingin menghapus?"
+  }
+}

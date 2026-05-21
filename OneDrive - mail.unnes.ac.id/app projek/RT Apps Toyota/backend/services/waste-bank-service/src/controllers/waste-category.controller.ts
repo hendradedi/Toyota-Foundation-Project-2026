@@ -9,7 +9,7 @@ export class WasteCategoryController {
   async getAll(req: Request, res: Response) {
     try {
       const result = await db.query(
-        `SELECT id, name, description, unit_of_measurement, points_per_unit, is_active, created_at
+        `SELECT id, name, description, unit, value_per_unit, is_active, created_at
          FROM waste_categories
          WHERE is_active = true
          ORDER BY name ASC`
@@ -42,7 +42,7 @@ export class WasteCategoryController {
       const { id } = req.params;
 
       const result = await db.query(
-        `SELECT id, name, description, unit_of_measurement, points_per_unit, is_active, created_at
+        `SELECT id, name, description, unit, value_per_unit, is_active, created_at
          FROM waste_categories
          WHERE id = $1`,
         [id]
@@ -87,9 +87,9 @@ export class WasteCategoryController {
       const { name, description, unitOfMeasurement, pointsPerUnit } = req.body;
 
       const result = await db.query(
-        `INSERT INTO waste_categories (name, description, unit_of_measurement, points_per_unit)
+        `INSERT INTO waste_categories (name, description, unit, value_per_unit)
          VALUES ($1, $2, $3, $4)
-         RETURNING id, name, description, unit_of_measurement, points_per_unit, is_active, created_at`,
+         RETURNING id, name, description, unit, value_per_unit, is_active, created_at`,
         [name, description, unitOfMeasurement, pointsPerUnit]
       );
 
@@ -139,11 +139,11 @@ export class WasteCategoryController {
         `UPDATE waste_categories
          SET name = COALESCE($1, name),
              description = COALESCE($2, description),
-             unit_of_measurement = COALESCE($3, unit_of_measurement),
-             points_per_unit = COALESCE($4, points_per_unit),
+             unit = COALESCE($3, unit),
+             value_per_unit = COALESCE($4, value_per_unit),
              is_active = COALESCE($5, is_active)
          WHERE id = $6
-         RETURNING id, name, description, unit_of_measurement, points_per_unit, is_active, created_at`,
+           RETURNING id, name, description, unit, value_per_unit, is_active, created_at`,
         [name, description, unitOfMeasurement, pointsPerUnit, isActive, id]
       );
 

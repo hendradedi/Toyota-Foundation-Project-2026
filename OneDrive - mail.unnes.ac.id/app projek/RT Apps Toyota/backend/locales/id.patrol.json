@@ -1,0 +1,69 @@
+{
+  "patrol": {
+    "created": "Jadwal patroli berhasil dibuat",
+    "updated": "Jadwal patroli berhasil diperbarui",
+    "deleted": "Jadwal patroli berhasil dihapus",
+    "shiftStarted": "Shift berhasil dimulai",
+    "shiftEnded": "Shift berhasil berakhir"
+  },
+  "patrolType": {
+    "foot": "Patroli Kaki",
+    "vehicle": "Patroli Kendaraan",
+    "bike": "Patroli Sepeda",
+    "fixed": "Pos Tetap"
+  },
+  "patrolStatus": {
+    "scheduled": "Dijadwalkan",
+    "active": "Aktif",
+    "completed": "Selesai",
+    "cancelled": "Dibatalkan"
+  },
+  "patrol": {
+    "title": "Jadwal Patroli",
+    "schedule": "Jadwal",
+    "startTime": "Waktu Mulai",
+    "endTime": "Waktu Selesai",
+    "patrolType": "Jenis Patroli",
+    "patrolArea": "Area Patroli",
+    "patrolTeam": "Tim Patroli",
+    "patrolLeader": "Ketua Patroli",
+    "teamMembers": "Anggota Tim",
+    "status": "Status",
+    "notes": "Catatan",
+    "report": "Laporan",
+    "incidents": "Kejadian",
+    "observations": "Pengamatan"
+  },
+  "patrolActions": {
+    "create": "Buat Jadwal",
+    "start": "Mulai Patroli",
+    "end": "Selesaikan Patroli",
+    "edit": "Edit Jadwal",
+    "delete": "Hapus Jadwal",
+    "viewReport": "Lihat Laporan",
+    "addIncident": "Tambah Kejadian",
+    "addObservation": "Tambah Pengamatan"
+  },
+  "patrolMessages": {
+    "noPatrols": "Tidak ada jadwal patroli ditemukan",
+    "patrolCreated": "Jadwal patroli berhasil dibuat",
+    "patrolStarted": "Patroli berhasil dimulai",
+    "patrolEnded": "Patroli berhasil berakhir",
+    "patrolUpdated": "Jadwal patroli berhasil diperbarui",
+    "confirmDelete": "Apakah Anda yakin ingin menghapus jadwal patroli ini?",
+    "shiftStarted": "Shift dimulai pada {{time}}",
+    "shiftEnded": "Shift berakhir pada {{time}}"
+  },
+  "report": {
+    "title": "Laporan Patroli",
+    "date": "Tanggal",
+    "patrolLeader": "Ketua Patroli",
+    "teamMembers": "Anggota Tim",
+    "shiftTime": "Waktu Shift",
+    "weather": "Cuaca",
+    "incidents": "Kejadian",
+    "observations": "Pengamatan",
+    "actionsTaken": "Tindakan yang Diambil",
+    "recommendations": "Rekomendasi"
+  }
+}

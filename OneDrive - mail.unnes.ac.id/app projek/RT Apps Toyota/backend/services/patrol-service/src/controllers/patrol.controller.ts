@@ -107,32 +107,29 @@ export const getShifts = async (req: Request, res: Response) => {
     const offset = ((Number(page) - 1) * Number(limit));
 
     let query = `
-      SELECT ps.*, u.full_name as user_name, u.phone as user_phone, n.name as neighborhood_name
+      SELECT ps.*, CONCAT(u.first_name, ' ', COALESCE(u.last_name, '')) as user_name, u.phone as user_phone, n.name as neighborhood_name
       FROM patrol_shifts ps
-      JOIN users u ON ps.user_id = u.id
-      JOIN neighborhoods n ON ps.neighborhood_id = n.id
+      JOIN users u ON ps.assigned_to = u.id
+      LEFT JOIN patrol_schedules sch ON ps.schedule_id = sch.id
+      LEFT JOIN neighborhoods n ON sch.neighborhood_id = n.id
       WHERE 1=1
     `;
     const params: any[] = [];
     let paramCount = 1;
 
     if (user_id) {
-      query += ` AND ps.user_id = $${paramCount}`;
+      query += ` AND ps.assigned_to = $${paramCount}`;
       params.push(user_id);
       paramCount++;
     }
 
     if (neighborhood_id) {
-      query += ` AND ps.neighborhood_id = $${paramCount}`;
+      query += ` AND sch.neighborhood_id = $${paramCount}`;
       params.push(neighborhood_id);
       paramCount++;
     }
 
-    if (shift_type) {
-      query += ` AND ps.shift_type = $${paramCount}`;
-      params.push(shift_type);
-      paramCount++;
-    }
+    // shift_type is ignored because current patrol_shifts schema does not include this column
 
     if (status) {
       query += ` AND ps.status = $${paramCount}`;
@@ -141,20 +138,20 @@ export const getShifts = async (req: Request, res: Response) => {
     }
 
     if (start_date) {
-      query += ` AND DATE(ps.start_time) >= $${paramCount}`;
+      query += ` AND ps.shift_date >= $${paramCount}`;
       params.push(start_date);
       paramCount++;
     }
 
     if (end_date) {
-      query += ` AND DATE(ps.end_time) <= $${paramCount}`;
+      query += ` AND ps.shift_date <= $${paramCount}`;
       params.push(end_date);
       paramCount++;
     }
 
     // Get total count
     const countResult = await client.query(
-      query.replace('SELECT ps.*, u.full_name as user_name, u.phone as user_phone, n.name as neighborhood_name', 'SELECT COUNT(*) as count'),
+      query.replace("SELECT ps.*, CONCAT(u.first_name, ' ', COALESCE(u.last_name, '')) as user_name, u.phone as user_phone, n.name as neighborhood_name", 'SELECT COUNT(*) as count'),
       params
     );
     const total = parseInt(countResult.rows[0].count, 10);
@@ -162,16 +159,16 @@ export const getShifts = async (req: Request, res: Response) => {
     // Add sorting
     switch (sort_by) {
       case 'date_asc':
-        query += ' ORDER BY ps.start_time ASC';
+        query += ' ORDER BY ps.shift_date ASC, ps.shift_start_time ASC';
         break;
       case 'date_desc':
-        query += ' ORDER BY ps.start_time DESC';
+        query += ' ORDER BY ps.shift_date DESC, ps.shift_start_time DESC';
         break;
       case 'user_asc':
-        query += ' ORDER BY u.full_name ASC';
+        query += " ORDER BY u.first_name ASC, COALESCE(u.last_name, '') ASC";
         break;
       case 'user_desc':
-        query += ' ORDER BY u.full_name DESC';
+        query += " ORDER BY u.first_name DESC, COALESCE(u.last_name, '') DESC";
         break;
     }
 

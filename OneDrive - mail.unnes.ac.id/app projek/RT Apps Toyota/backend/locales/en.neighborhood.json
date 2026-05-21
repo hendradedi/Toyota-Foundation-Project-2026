@@ -1,0 +1,75 @@
+{
+  "neighborhood": {
+    "title": "Neighborhood",
+    "name": "Neighborhood Name",
+    "code": "Neighborhood Code",
+    "description": "Description",
+    "address": "Address",
+    "totalHouseholds": "Total Households",
+    "totalResidents": "Total Residents",
+    "chairman": "Chairman",
+    "viceChairman": "Vice Chairman",
+    "secretary": "Secretary",
+    "treasurer": "Treasurer"
+  },
+  "household": {
+    "title": "Household",
+    "householdNumber": "Household Number",
+    "headOfHousehold": "Head of Household",
+    "address": "Address",
+    "phone": "Phone",
+    "totalMembers": "Total Members",
+    "status": "Status",
+    "joinDate": "Join Date"
+  },
+  "resident": {
+    "title": "Resident",
+    "name": "Name",
+    "idNumber": "ID Number",
+    "dateOfBirth": "Date of Birth",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "occupation": "Occupation",
+    "phone": "Phone",
+    "email": "Email",
+    "status": "Status"
+  },
+  "facility": {
+    "title": "Facility",
+    "name": "Facility Name",
+    "type": "Type",
+    "description": "Description",
+    "location": "Location",
+    "capacity": "Capacity",
+    "status": "Status",
+    "openingHours": "Opening Hours"
+  },
+  "facilityType": {
+    "communityHall": "Community Hall",
+    "playground": "Playground",
+    "park": "Park",
+    "sportsFacility": "Sports Facility",
+    "library": "Library",
+    "healthCenter": "Health Center",
+    "other": "Other"
+  },
+  "actions": {
+    "viewDetails": "View Details",
+    "edit": "Edit",
+    "delete": "Delete",
+    "addResident": "Add Resident",
+    "addHousehold": "Add Household",
+    "addFacility": "Add Facility"
+  },
+  "messages": {
+    "noNeighborhoods": "No neighborhoods found",
+    "noHouseholds": "No households found",
+    "noResidents": "No residents found",
+    "noFacilities": "No facilities found",
+    "created": "Created successfully",
+    "updated": "Updated successfully",
+    "deleted": "Deleted successfully",
+    "confirmDelete": "Are you sure you want to delete?"
+  }
+}

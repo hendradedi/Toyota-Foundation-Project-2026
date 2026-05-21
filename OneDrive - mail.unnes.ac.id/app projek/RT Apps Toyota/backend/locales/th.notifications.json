@@ -1,0 +1,29 @@
+{
+  "notification": {
+    "title": "การแจ้งเตือน",
+    "message": "ข้อความ",
+    "type": "ประเภท",
+    "read": "อ่านแล้ว",
+    "unread": "ยังไม่ได้อ่าน",
+    "markAsRead": "ทำเครื่องหมายว่าอ่านแล้ว",
+    "markAllAsRead": "ทำเครื่องหมายทั้งหมดว่าอ่านแล้ว",
+    "deleteAll": "ลบทั้งหมด",
+    "noNotifications": "ไม่มีการแจ้งเตือน"
+  },
+  "notificationType": {
+    "info": "ข้อมูล",
+    "warning": "คำเตือน",
+    "error": "ข้อผิดพลาด",
+    "success": "สำเร็จ",
+    "alert": "การแจ้งเตือน",
+    "reminder": "การเตือนความจำ"
+  },
+  "notificationMessages": {
+    "newAlert": "การแจ้งเตือนฉุกเฉินใหม่: {{alertNumber}}",
+    "patrolReminder": "การเตือนการลาดตระเวน: กะเริ่มใน {{time}}",
+    "orderUpdate": "คำสั่งซื้อ {{orderNumber}} อัปเดต: {{status}}",
+    "pointsEarned": "คุณได้รับ {{points}} คะแนนจากการฝาก",
+    "depositVerified": "การฝากของคุณได้รับการยืนยันแล้ว",
+    "newMessage": "ข้อความใหม่จาก {{sender}}"
+  }
+}

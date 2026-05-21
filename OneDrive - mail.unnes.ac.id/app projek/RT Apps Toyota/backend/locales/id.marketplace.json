@@ -1,0 +1,132 @@
+{
+  "marketplace": {
+    "created": "Marketplace berhasil dibuat",
+    "updated": "Marketplace berhasil diperbarui",
+    "deleted": "Marketplace berhasil dihapus"
+  },
+  "marketplaceType": {
+    "physical": "Toko Fisik",
+    "online": "Toko Online",
+    "hybrid": "Hybrid"
+  },
+  "marketplaceStatus": {
+    "active": "Aktif",
+    "inactive": "Tidak Aktif",
+    "suspended": "Ditangguhkan",
+    "pending": "Menunggu"
+  },
+  "marketplace": {
+    "title": "Marketplace",
+    "name": "Nama Toko",
+    "description": "Deskripsi",
+    "type": "Jenis",
+    "address": "Alamat",
+    "phone": "Telepon",
+    "email": "Email",
+    "website": "Website",
+    "owner": "Pemilik",
+    "ownerName": "Nama Pemilik",
+    "ownerPhone": "Telepon Pemilik",
+    "openingHours": "Jam Buka",
+    "categories": "Kategori",
+    "products": "Produk",
+    "orders": "Pesanan",
+    "rating": "Rating",
+    "reviews": "Ulasan"
+  },
+  "marketplaceActions": {
+    "create": "Buat Toko",
+    "edit": "Edit Toko",
+    "delete": "Hapus Toko",
+    "viewProducts": "Lihat Produk",
+    "viewOrders": "Lihat Pesanan",
+    "viewCustomers": "Lihat Pelanggan",
+    "manageCategories": "Kelola Kategori",
+    "analytics": "Analitik"
+  },
+  "marketplaceMessages": {
+    "noMarketplaces": "Tidak ada marketplace ditemukan",
+    "marketplaceCreated": "Marketplace berhasil dibuat",
+    "marketplaceUpdated": "Marketplace berhasil diperbarui",
+    "marketplaceDeleted": "Marketplace berhasil dihapus",
+    "confirmDelete": "Apakah Anda yakin ingin menghapus marketplace ini?",
+    "storeClosed": "Toko saat ini tutup",
+    "storeOpen": "Toko saat ini buka"
+  },
+  "product": {
+    "title": "Produk",
+    "name": "Nama Produk",
+    "description": "Deskripsi",
+    "price": "Harga",
+    "quantity": "Jumlah",
+    "category": "Kategori",
+    "image": "Gambar",
+    "status": "Status",
+    "stock": "Stok",
+    "sold": "Terjual",
+    "rating": "Rating",
+    "reviews": "Ulasan"
+  },
+  "productActions": {
+    "create": "Tambah Produk",
+    "edit": "Edit Produk",
+    "delete": "Hapus Produk",
+    "viewDetails": "Lihat Detail",
+    "manageStock": "Kelola Stok"
+  },
+  "productMessages": {
+    "noProducts": "Tidak ada produk ditemukan",
+    "productCreated": "Produk berhasil ditambahkan",
+    "productUpdated": "Produk berhasil diperbarui",
+    "productDeleted": "Produk berhasil dihapus",
+    "confirmDelete": "Apakah Anda yakin ingin menghapus produk ini?",
+    "outOfStock": "Habis stok",
+    "lowStock": "Stok sedikit"
+  },
+  "order": {
+    "title": "Pesanan",
+    "orderNumber": "Nomor Pesanan",
+    "customer": "Pelanggan",
+    "customerName": "Nama Pelanggan",
+    "customerPhone": "Telepon Pelanggan",
+    "items": "Item",
+    "quantity": "Jumlah",
+    "unitPrice": "Harga Satuan",
+    "totalPrice": "Total Harga",
+    "status": "Status",
+    "paymentMethod": "Metode Pembayaran",
+    "paymentStatus": "Status Pembayaran",
+    "deliveryAddress": "Alamat Pengiriman",
+    "deliveryStatus": "Status Pengiriman",
+    "notes": "Catatan",
+    "createdAt": "Dibuat Pada",
+    "updatedAt": "Diperbarui Pada"
+  },
+  "orderStatus": {
+    "pending": "Menunggu",
+    "confirmed": "Dikonfirmasi",
+    "processing": "Diproses",
+    "shipped": "Dikirim",
+    "delivered": "Diterima",
+    "cancelled": "Dibatalkan",
+    "refunded": "Dikembalikan"
+  },
+  "orderActions": {
+    "create": "Buat Pesanan",
+    "edit": "Edit Pesanan",
+    "delete": "Hapus Pesanan",
+    "viewDetails": "Lihat Detail",
+    "confirm": "Konfirmasi Pesanan",
+    "cancel": "Batalkan Pesanan",
+    "track": "Lacak Pesanan"
+  },
+  "orderMessages": {
+    "noOrders": "Tidak ada pesanan ditemukan",
+    "orderCreated": "Pesanan berhasil dibuat",
+    "orderUpdated": "Pesanan berhasil diperbarui",
+    "orderDeleted": "Pesanan berhasil dihapus",
+    "confirmDelete": "Apakah Anda yakin ingin menghapus pesanan ini?",
+    "orderConfirmed": "Pesanan berhasil dikonfirmasi",
+    "orderCancelled": "Pesanan berhasil dibatalkan"
+  }
+}

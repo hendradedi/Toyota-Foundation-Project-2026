@@ -92,7 +92,7 @@ services:
   api-gateway:
     build:
       context: ./backend/api-gateway
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     container_name: rt-muban-api-gateway
     restart: unless-stopped
     environment:
@@ -126,7 +126,7 @@ services:
   user-service:
     build:
       context: ./backend/services/user-service
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     container_name: rt-muban-user-service
     restart: unless-stopped
     environment:
@@ -160,7 +160,7 @@ services:
   administration-service:
     build:
       context: ./backend/services/administration-service
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     container_name: rt-muban-administration-service
     restart: unless-stopped
     environment:
@@ -193,7 +193,7 @@ services:
   waste-bank-service:
     build:
       context: ./backend/services/waste-bank-service
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     container_name: rt-muban-waste-bank-service
     restart: unless-stopped
     environment:
@@ -226,7 +226,7 @@ services:
   marketplace-service:
     build:
       context: ./backend/services/marketplace-service
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     container_name: rt-muban-marketplace-service
     restart: unless-stopped
     environment:
@@ -259,7 +259,7 @@ services:
   sos-service:
     build:
       context: ./backend/services/sos-service
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     container_name: rt-muban-sos-service
     restart: unless-stopped
     environment:
@@ -292,7 +292,7 @@ services:
   patrol-service:
     build:
       context: ./backend/services/patrol-service
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     container_name: rt-muban-patrol-service
     restart: unless-stopped
     environment:
@@ -325,7 +325,7 @@ services:
   notification-service:
     build:
       context: ./backend/services/notification-service
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     container_name: rt-muban-notification-service
     restart: unless-stopped
     environment:
@@ -362,7 +362,7 @@ services:
   web-app:
     build:
       context: ./frontend/web-app
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     container_name: rt-muban-web-app
     restart: unless-stopped
     environment:
@@ -387,7 +387,7 @@ services:
   admin-dashboard:
     build:
       context: ./frontend/admin-dashboard
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     container_name: rt-muban-admin-dashboard
     restart: unless-stopped
     environment:
@@ -505,3 +505,4 @@ volumes:
     driver: local
   pgadmin_data:
     driver: local
+

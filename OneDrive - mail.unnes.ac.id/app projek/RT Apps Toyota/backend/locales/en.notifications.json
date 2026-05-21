@@ -1,0 +1,29 @@
+{
+  "notification": {
+    "title": "Notification",
+    "message": "Message",
+    "type": "Type",
+    "read": "Read",
+    "unread": "Unread",
+    "markAsRead": "Mark as Read",
+    "markAllAsRead": "Mark All as Read",
+    "deleteAll": "Delete All",
+    "noNotifications": "No notifications"
+  },
+  "notificationType": {
+    "info": "Information",
+    "warning": "Warning",
+    "error": "Error",
+    "success": "Success",
+    "alert": "Alert",
+    "reminder": "Reminder"
+  },
+  "notificationMessages": {
+    "newAlert": "New emergency alert: {{alertNumber}}",
+    "patrolReminder": "Patrol reminder: Shift starts in {{time}}",
+    "orderUpdate": "Order {{orderNumber}} updated: {{status}}",
+    "pointsEarned": "You earned {{points}} points from deposit",
+    "depositVerified": "Your deposit has been verified",
+    "newMessage": "New message from {{sender}}"
+  }
+}

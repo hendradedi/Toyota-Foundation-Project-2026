@@ -105,9 +105,9 @@ export const getAlerts = async (req: Request, res: Response) => {
     const offset = ((Number(page) - 1) * Number(limit));
 
     let query = `
-      SELECT e.*, u.full_name as user_name, u.phone as user_phone
-      FROM emergency_alerts e
-      JOIN users u ON e.user_id = u.id
+      SELECT e.*, CONCAT(u.first_name, ' ', COALESCE(u.last_name, '')) as user_name, u.phone as user_phone
+      FROM sos_alerts e
+      JOIN users u ON e.reporter_id = u.id
       WHERE 1=1
     `;
     const params: any[] = [];
@@ -126,7 +126,7 @@ export const getAlerts = async (req: Request, res: Response) => {
     }
 
     if (user_id) {
-      query += ` AND e.user_id = $${paramCount}`;
+      query += ` AND e.reporter_id = $${paramCount}`;
       params.push(user_id);
       paramCount++;
     }
@@ -145,7 +145,7 @@ export const getAlerts = async (req: Request, res: Response) => {
 
     // Get total count
     const countResult = await client.query(
-      query.replace('SELECT e.*, u.full_name as user_name, u.phone as user_phone', 'SELECT COUNT(*) as count'),
+      query.replace("SELECT e.*, CONCAT(u.first_name, ' ', COALESCE(u.last_name, '')) as user_name, u.phone as user_phone", 'SELECT COUNT(*) as count'),
       params
     );
     const total = parseInt(countResult.rows[0].count, 10);

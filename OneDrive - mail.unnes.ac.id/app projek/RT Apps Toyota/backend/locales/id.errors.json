@@ -1,0 +1,56 @@
+{
+  "validation": {
+    "required": "Bidang {{field}} wajib diisi",
+    "email": "Format email tidak valid",
+    "minLength": "{{field}} harus minimal {{min}} karakter",
+    "maxLength": "{{field}} harus maksimal {{max}} karakter",
+    "min": "{{field}} harus minimal {{min}}",
+    "max": "{{field}} harus maksimal {{max}}",
+    "pattern": "Format {{field}} tidak valid",
+    "unique": "{{field}} sudah digunakan",
+    "passwordMatch": "Konfirmasi kata sandi tidak cocok",
+    "phone": "Nomor telepon tidak valid",
+    "url": "URL tidak valid",
+    "date": "Tanggal tidak valid",
+    "dateRange": "Rentang tanggal tidak valid",
+    "number": "Harus berupa angka",
+    "integer": "Harus berupa bilangan bulat",
+    "positiveNumber": "Harus berupa angka positif"
+  },
+  "auth": {
+    "unauthorized": "Tidak terautentikasi",
+    "forbidden": "Akses ditolak",
+    "invalidToken": "Token tidak valid",
+    "tokenExpired": "Token sudah kadaluarsa",
+    "invalidCredentials": "Email atau kata sandi tidak valid",
+    "accountLocked": "Akun terkunci",
+    "accountNotVerified": "Akun belum terverifikasi",
+    "sessionExpired": "Sesi sudah berakhir"
+  },
+  "server": {
+    "internal": "Kesalahan server internal",
+    "database": "Kesalahan database",
+    "network": "Kesalahan jaringan",
+    "timeout": "Permintaan waktu habis",
+    "serviceUnavailable": "Layanan tidak tersedia"
+  },
+  "notFound": {
+    "resource": "Sumber daya tidak ditemukan",
+    "user": "Pengguna tidak ditemukan",
+    "page": "Halaman tidak ditemukan",
+    "alert": "Alert tidak ditemukan",
+    "patrol": "Patroli tidak ditemukan",
+    "order": "Pesanan tidak ditemukan",
+    "product": "Produk tidak ditemukan",
+    "deposit": "Setoran tidak ditemukan",
+    "category": "Kategori tidak ditemukan"
+  },
+  "business": {
+    "insufficientStock": "Stok tidak mencukupi",
+    "insufficientPoints": "Poin tidak mencukupi",
+    "orderCannotBeModified": "Pesanan tidak dapat dimodifikasi",
+    "alertAlreadyResolved": "Alert sudah diselesaikan",
+    "patrolAlreadyStarted": "Patroli sudah dimulai",
+    "duplicateEntry": "Entri duplikat terdeteksi"
+  }
+}

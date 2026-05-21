@@ -10,7 +10,7 @@
     "database"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev --workspace=api-gateway\" \"npm run dev --workspace=user-service\" \"npm run dev --workspace=administration-service\" \"npm run dev --workspace=waste-bank-service\" \"npm run dev --workspace=marketplace-service\" \"npm run dev --workspace=sos-service\" \"npm run dev --workspace=patrol-service\" \"npm run dev --workspace=notification-service\"",
+    "dev": "concurrently \"npm run dev --workspace=api-gateway\" \"npm run dev --workspace=services/user-service\" \"npm run dev --workspace=services/administration-service\" \"npm run dev --workspace=services/waste-bank-service\" \"npm run dev --workspace=services/marketplace-service\" \"npm run dev --workspace=services/sos-service\" \"npm run dev --workspace=services/patrol-service\" \"npm run dev --workspace=services/notification-service\"",
     "build": "npm run build --workspaces",
     "test": "npm run test --workspaces",
     "lint": "npm run lint --workspaces",

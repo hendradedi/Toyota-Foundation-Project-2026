@@ -1,0 +1,144 @@
+# Docker Compose for Development - Essential Services Only
+# This is a simplified version that starts only the database services
+
+services:
+  # ============================================
+  # Database Services
+  # ============================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: rt-muban-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: rt_muban_db
+      POSTGRES_USER: rt_muban_user
+      POSTGRES_PASSWORD: secure_password_change_me
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - rt-muban-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rt_muban_user -d rt_muban_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: rt-muban-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - rt-muban-network
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mongo:
+    image: mongo:6
+    container_name: rt-muban-mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin_password
+      MONGO_INITDB_DATABASE: rt_muban_logs
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - rt-muban-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/rt_muban_logs --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================
+  # Message Queue
+  # ============================================
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rt-muban-rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin_password
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - rt-muban-network
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================
+  # Database Management
+  # ============================================
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: rt-muban-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@rt-muban.example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - rt-muban-network
+    depends_on:
+      - postgres
+
+  # ============================================
+  # Redis Management
+  # ============================================
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: rt-muban-redis-commander
+    restart: unless-stopped
+    environment:
+      REDIS_HOSTS: local:redis:6379
+    ports:
+      - "8081:8081"
+    networks:
+      - rt-muban-network
+    depends_on:
+      - redis
+
+# ============================================
+# Networks
+# ============================================
+networks:
+  rt-muban-network:
+    driver: bridge
+    name: rt-muban-network
+
+# ============================================
+# Volumes
+# ============================================
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  mongo_data:
+    driver: local
+  rabbitmq_data:
+    driver: local
+  pgadmin_data:
+    driver: local

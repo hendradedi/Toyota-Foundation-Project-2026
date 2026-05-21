@@ -86,7 +86,7 @@ export const getProducts = async (req: Request, res: Response) => {
     const offset = ((Number(page) - 1) * Number(limit));
 
     let query = `
-      SELECT p.*, b.name as business_name, b.category as business_category
+      SELECT p.*, b.business_name as business_name, b.category as business_category
       FROM products p
       JOIN businesses b ON p.business_id = b.id
       WHERE 1=1
@@ -132,7 +132,7 @@ export const getProducts = async (req: Request, res: Response) => {
 
     // Get total count
     const countResult = await client.query(
-      query.replace('SELECT p.*, b.name as business_name, b.category as business_category', 'SELECT COUNT(*) as count'),
+      query.replace('SELECT p.*, b.business_name as business_name, b.category as business_category', 'SELECT COUNT(*) as count'),
       params
     );
     const total = parseInt(countResult.rows[0].count, 10);

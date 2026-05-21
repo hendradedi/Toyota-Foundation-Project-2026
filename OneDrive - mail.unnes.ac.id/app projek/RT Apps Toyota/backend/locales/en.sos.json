@@ -1,0 +1,69 @@
+{
+  "alert": {
+    "created": "Alert created successfully",
+    "updated": "Alert updated successfully",
+    "deleted": "Alert deleted successfully",
+    "responded": "Alert responded successfully",
+    "cancelled": "Alert cancelled successfully"
+  },
+  "alertType": {
+    "medical": "Medical Emergency",
+    "fire": "Fire Emergency",
+    "crime": "Crime/Security",
+    "accident": "Accident",
+    "other": "Other Emergency"
+  },
+  "alertStatus": {
+    "pending": "Pending",
+    "active": "Active",
+    "responded": "Responded",
+    "resolved": "Resolved",
+    "cancelled": "Cancelled"
+  },
+  "alert": {
+    "title": "Emergency Alert",
+    "description": "Emergency Description",
+    "location": "Location",
+    "contact": "Contact Person",
+    "phone": "Phone Number",
+    "alertNumber": "Alert Number",
+    "createdAt": "Created At",
+    "respondedAt": "Responded At",
+    "resolvedAt": "Resolved At",
+    "respondedBy": "Responded By",
+    "responseMessage": "Response Message",
+    "priority": "Priority",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
+  },
+  "alertActions": {
+    "create": "Create Alert",
+    "respond": "Respond to Alert",
+    "resolve": "Resolve Alert",
+    "cancel": "Cancel Alert",
+    "broadcast": "Broadcast Alert",
+    "viewDetails": "View Details",
+    "edit": "Edit Alert",
+    "delete": "Delete Alert"
+  },
+  "alertMessages": {
+    "noAlerts": "No alerts found",
+    "alertCreated": "Emergency alert created successfully",
+    "alertResponded": "Alert responded successfully",
+    "alertResolved": "Alert resolved successfully",
+    "alertCancelled": "Alert cancelled successfully",
+    "confirmCancel": "Are you sure you want to cancel this alert?",
+    "confirmResolve": "Are you sure you want to mark this alert as resolved?",
+    "confirmDelete": "Are you sure you want to delete this alert?"
+  },
+  "broadcast": {
+    "title": "Broadcast Alert",
+    "message": "Broadcast Message",
+    "recipients": "Recipients",
+    "allResidents": "All Residents",
+    "selectedResidents": "Selected Residents",
+    "broadcastSent": "Broadcast sent successfully",
+    "broadcastFailed": "Failed to send broadcast"
+  }
+}

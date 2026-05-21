@@ -1,0 +1,69 @@
+{
+  "patrol": {
+    "created": "สร้างตารางการลาดตระเวนสำเร็จ",
+    "updated": "อัปเดตตารางการลาดตระเวนสำเร็จ",
+    "deleted": "ลบตารางการลาดตระเวนสำเร็จ",
+    "shiftStarted": "เริ่มกะสำเร็จ",
+    "shiftEnded": "สิ้นสุดกะสำเร็จ"
+  },
+  "patrolType": {
+    "foot": "การลาดตระเวนเท้า",
+    "vehicle": "การลาดตระเวนรถ",
+    "bike": "การลาดตระเวนจักรยาน",
+    "fixed": "จุดประจำการ"
+  },
+  "patrolStatus": {
+    "scheduled": "กำหนดการแล้ว",
+    "active": "ใช้งาน",
+    "completed": "เสร็จสิ้น",
+    "cancelled": "ยกเลิก"
+  },
+  "patrol": {
+    "title": "ตารางการลาดตระเวน",
+    "schedule": "ตาราง",
+    "startTime": "เวลาเริ่มต้น",
+    "endTime": "เวลาสิ้นสุด",
+    "patrolType": "ประเภทการลาดตระเวน",
+    "patrolArea": "พื้นที่การลาดตระเวน",
+    "patrolTeam": "ทีมการลาดตระเวน",
+    "patrolLeader": "หัวหน้าทีมการลาดตระเวน",
+    "teamMembers": "สมาชิกทีม",
+    "status": "สถานะ",
+    "notes": "บันทึก",
+    "report": "รายงาน",
+    "incidents": "เหตุการณ์",
+    "observations": "การสังเกต"
+  },
+  "patrolActions": {
+    "create": "สร้างตาราง",
+    "start": "เริ่มการลาดตระเวน",
+    "end": "สิ้นสุดการลาดตระเวน",
+    "edit": "แก้ไขตาราง",
+    "delete": "ลบตาราง",
+    "viewReport": "ดูรายงาน",
+    "addIncident": "เพิ่มเหตุการณ์",
+    "addObservation": "เพิ่มการสังเกต"
+  },
+  "patrolMessages": {
+    "noPatrols": "ไม่พบตารางการลาดตระเวน",
+    "patrolCreated": "สร้างตารางการลาดตระเวนสำเร็จ",
+    "patrolStarted": "เริ่มการลาดตระเวนสำเร็จ",
+    "patrolEnded": "สิ้นสุดการลาดตระเวนสำเร็จ",
+    "patrolUpdated": "อัปเดตตารางการลาดตระเวนสำเร็จ",
+    "confirmDelete": "คุณแน่ใจหรือไม่ว่าต้องการลบตารางการลาดตระเวนนี้?",
+    "shiftStarted": "เริ่มกะเวลา {{time}}",
+    "shiftEnded": "สิ้นสุดกะเวลา {{time}}"
+  },
+  "report": {
+    "title": "รายงานการลาดตระเวน",
+    "date": "วันที่",
+    "patrolLeader": "หัวหน้าทีมการลาดตระเวน",
+    "teamMembers": "สมาชิกทีม",
+    "shiftTime": "เวลากะ",
+    "weather": "สภาพอากาศ",
+    "incidents": "เหตุการณ์",
+    "observations": "การสังเกต",
+    "actionsTaken": "การดำเนินการที่ทำ",
+    "recommendations": "คำแนะนำ"
+  }
+}

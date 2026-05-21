@@ -1,0 +1,101 @@
+{
+  "warung": {
+    "title": "Warung Warga",
+    "subtitle": "Jual beli barang bekas maupun baru di lingkungan RT",
+    "my_warungs": "Warung Saya",
+    "browse_warungs": "Jelajahi Warung",
+    "applications": "Pengajuan Warung",
+    "analytics": "Analitik Warung",
+    "create": "Buat Warung Baru",
+    "edit": "Edit Warung",
+    "close": "Tutup Warung",
+    "status": {
+      "pending": "Menunggu Persetujuan",
+      "approved": "Disetujui",
+      "rejected": "Ditolak",
+      "inactive": "Tidak Aktif"
+    },
+    "scope": {
+      "rt_only": "Hanya RT Ini",
+      "community": "Komunitas RT",
+      "all_rt": "Semua RT"
+    },
+    "approval": {
+      "title": "Persetujuan Warung",
+      "description": "Pengajuan warung perlu persetujuan Pak RT terlebih dahulu. Masa berlaku 1 tahun.",
+      "approve": "Setujui",
+      "reject": "Tolak",
+      "reason": "Alasan Persetujuan/Penolakan",
+      "expiry": "Masa Berlaku",
+      "validity_period": "Berlaku selama 1 tahun dari tanggal persetujuan",
+      "pending_applications": "Pengajuan Menunggu",
+      "no_pending": "Tidak ada pengajuan yang menunggu"
+    },
+    "product": {
+      "title": "Produk",
+      "add": "Tambah Produk",
+      "edit": "Edit Produk",
+      "condition": {
+        "new": "Baru",
+        "good": "Bekas - Baik",
+        "fair": "Bekas - Cukup",
+        "excellent": "Bekas - Sangat Baik"
+      },
+      "stock": "Stok",
+      "price": "Harga",
+      "category": "Kategori"
+    },
+    "order": {
+      "title": "Pesanan",
+      "my_orders": "Pesanan Saya",
+      "seller_orders": "Pesanan Penjual",
+      "create": "Buat Pesanan",
+      "status": {
+        "pending": "Menunggu",
+        "confirmed": "Dikonfirmasi",
+        "processing": "Diproses",
+        "shipped": "Dikirim",
+        "delivered": "Diterima",
+        "cancelled": "Dibatalkan",
+        "refunded": "Dikembalikan"
+      },
+      "update_status": "Perbarui Status"
+    },
+    "review": {
+      "title": "Ulasan",
+      "add": "Tulis Ulasan",
+      "rating": "Penilaian",
+      "comment": "Komentar",
+      "already_reviewed": "Anda sudah memberikan ulasan"
+    },
+    "validation": {
+      "shop_name_required": "Nama warung wajib diisi",
+      "category_required": "Kategori wajib dipilih",
+      "invalid_scope": "Lingkup komunitas tidak valid",
+      "invalid_condition": "Kondisi produk tidak valid",
+      "price_positive": "Harga harus lebih besar dari 0",
+      "stock_non_negative": "Stok tidak boleh negatif",
+      "insufficient_stock": "Stok tidak mencukupi",
+      "warung_inactive": "Warung tidak aktif atau belum disetujui",
+      "already_reviewed": "Anda sudah memberikan ulasan untuk warung ini",
+      "unauthorized": "Anda tidak memiliki izin"
+    },
+    "messages": {
+      "application_created": "Pengajuan warung berhasil dibuat",
+      "application_approved": "Warung berhasil disetujui",
+      "application_rejected": "Pengajuan warung ditolak",
+      "warung_closed": "Warung berhasil ditutup",
+      "product_created": "Produk berhasil ditambahkan",
+      "order_created": "Pesanan berhasil dibuat",
+      "review_created": "Ulasan berhasil ditambahkan",
+      "status_updated": "Status berhasil diperbarui"
+    },
+    "errors": {
+      "not_found": "Warung tidak ditemukan",
+      "unauthorized": "Anda tidak memiliki izin",
+      "invalid_status": "Status tidak valid",
+      "already_exists": "Anda sudah memiliki warung yang aktif",
+      "expired": "Masa berlaku warung sudah habis"
+    }
+  }
+}

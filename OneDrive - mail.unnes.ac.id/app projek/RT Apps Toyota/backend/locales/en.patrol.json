@@ -1,0 +1,69 @@
+{
+  "patrol": {
+    "created": "Patrol schedule created successfully",
+    "updated": "Patrol schedule updated successfully",
+    "deleted": "Patrol schedule deleted successfully",
+    "shiftStarted": "Shift started successfully",
+    "shiftEnded": "Shift ended successfully"
+  },
+  "patrolType": {
+    "foot": "Foot Patrol",
+    "vehicle": "Vehicle Patrol",
+    "bike": "Bike Patrol",
+    "fixed": "Fixed Post"
+  },
+  "patrolStatus": {
+    "scheduled": "Scheduled",
+    "active": "Active",
+    "completed": "Completed",
+    "cancelled": "Cancelled"
+  },
+  "patrol": {
+    "title": "Patrol Schedule",
+    "schedule": "Schedule",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "patrolType": "Patrol Type",
+    "patrolArea": "Patrol Area",
+    "patrolTeam": "Patrol Team",
+    "patrolLeader": "Patrol Leader",
+    "teamMembers": "Team Members",
+    "status": "Status",
+    "notes": "Notes",
+    "report": "Report",
+    "incidents": "Incidents",
+    "observations": "Observations"
+  },
+  "patrolActions": {
+    "create": "Create Schedule",
+    "start": "Start Patrol",
+    "end": "End Patrol",
+    "edit": "Edit Schedule",
+    "delete": "Delete Schedule",
+    "viewReport": "View Report",
+    "addIncident": "Add Incident",
+    "addObservation": "Add Observation"
+  },
+  "patrolMessages": {
+    "noPatrols": "No patrol schedules found",
+    "patrolCreated": "Patrol schedule created successfully",
+    "patrolStarted": "Patrol started successfully",
+    "patrolEnded": "Patrol ended successfully",
+    "patrolUpdated": "Patrol schedule updated successfully",
+    "confirmDelete": "Are you sure you want to delete this patrol schedule?",
+    "shiftStarted": "Shift started at {{time}}",
+    "shiftEnded": "Shift ended at {{time}}"
+  },
+  "report": {
+    "title": "Patrol Report",
+    "date": "Date",
+    "patrolLeader": "Patrol Leader",
+    "teamMembers": "Team Members",
+    "shiftTime": "Shift Time",
+    "weather": "Weather",
+    "incidents": "Incidents",
+    "observations": "Observations",
+    "actionsTaken": "Actions Taken",
+    "recommendations": "Recommendations"
+  }
+}
